@@ -15,6 +15,12 @@
 # limitations under the License.
 #
 
+if [ ! -f test/system/libs/helpers.bash ]; then
+  echo "test/system/libs/helpers.hash is missing"
+  echo "Forgot to run git submodule init ?"
+  exit 1
+fi
+
 load 'libs/helpers'
 
 @test "test suite: Set up" {
